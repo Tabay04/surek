@@ -7,11 +7,16 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <link href="../../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="../../assets/demo/demo.css" rel="stylesheet" />
     <title>Surat Keterangan Tidak Mampu</title>
+
+    <style>
+    
+
+    </style>
 </head>
 <body style='background-color:white;'>
     <div class="container">
@@ -19,7 +24,7 @@
             <div class="col-sm-2">
             </div>
             <div class="col-sm-2">
-            <img style='height:100px;' class="img-responsive" src="../image/agam.png" alt="" srcset="">
+            <img style='height:100px;' class="img-responsive" src="../../image/agam.png" alt="" srcset="">
             </div>
             <div class="col-sm-4" style="text-align:center;">
                 <h4><b>PEMERINTAH KABUPATEN AGAM</b></h4>
@@ -44,7 +49,7 @@
     <div class="row" style='text-align:center;'>
         <div class="col-sm-2"></div>
         <div class="col-sm-2"></div>
-        <div class="col-sm-4"><h4><b><u>SURAT KETERANGAN TIDAK MAMPU</u></b></h4>
+        <div class="col-sm-4"><h4><b><u>SURAT KETERANGAN PENGHASILAN</u></b></h4>
         <div style='text-align:center;'>Nomor:</div>
         </div>
         <div class="col-sm-2"></div>
@@ -183,11 +188,59 @@
         <div class='col-sm-2'></div>
         <div class="col-sm-8">
             <br>
-        <p>
-        Berdasarkan data yang ada pada kami,  nama  yang  tersebut diatas benar penduduk Jorong  //Nama Jorong , Nagari Kotogadang, Kecamatan IV Koto adalah benar keluarga miskin /kurang mampu.
-        </p>
+           <p>
+           Berdasarkan data yang ada pada kami,  nama  yang   tersebut  diatas  benar penduduk Jorong //Nama Jorong 
+           , Nagari Kotogadang dan berdasarkan keterangan yang  bersangkutan  mempunyai penghasilan setiap bulannya sebanyak Rp. //Jumlah penghasilan
+           , untuk  menghidupi keluarganya terdiri dari :
+           </p>
 
-        <p>Demikian surat keterangan tidak mampu ini kami diberikan dan dipergunakan untuk //Keterangan digunakan untuk apa</p>
+           <br>
+
+         
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+
+        <table class="table table-bordered">
+               <th>No</th>
+               <th>Nama</th>
+               <th>Tempat Tanggal Lahir</th>
+               <th>Pekerjaan</th>
+               <th>Hub.Keluarga</th>
+
+               <tr>
+                   <td>1</td>
+                   <td>Test</td>
+                   <td>Test</td>
+                   <td>Test</td>
+                   <td>Test</td>
+               </tr>
+               <tr>
+                   <td>2</td>
+                   <td>Test</td>
+                   <td>Test</td>
+                   <td>Test</td>
+                   <td>Test</td>
+               </tr>
+               <tr>
+                   <td>3</td>
+                   <td>Test</td>
+                   <td>Test</td>
+                   <td>Test</td>
+                   <td>Test</td>
+               </tr>
+               <tr>
+                   <td>4</td>
+                   <td>Test</td>
+                   <td>Test</td>
+                   <td>Test</td>
+                   <td>Test</td>
+               </tr>
+           </table>
         </div>
         <div class="col-sm-2"></div>
     </div>
