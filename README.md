@@ -11,3 +11,5 @@ Branch Template Surat:
 ![alt text](https://github.com/Tabay04/surek/blob/namora/image/N3.png)
 6.Surat Rekomendasi SKCK
 ![alt text](https://github.com/Tabay04/surek/blob/namora/image/skck.png)
+7.Surat Keterangan Meninggal Dunia
+![alt text](https://github.com/Tabay04/surek/blob/namora/image/skmd.png)
