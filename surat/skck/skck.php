@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../../assets/demo/demo.css" rel="stylesheet" />
-    <title>Surat Keterangan Tidak Mampu</title>
+    <title>REKOMENDASI SURAT KETERANGAN BERKELAKUAN BAIK</title>
 </head>
 
 <body style='background-color:white;'>
@@ -49,7 +49,7 @@
     <div class="row">
         <div class='col-sm-2'></div>
         <div class="col-sm-8">
-            <div style='text-align:center;'> <u><b>SURAT KETERANGAN MENINGGAL DUNIA</b></u>
+            <div style='text-align:center;'> <u><b>REKOMENDASI SURAT KETERANGAN BERKELAKUAN BAIK</b></u>
                 <br>
                 <b>Nomor: XX/XX/XX</b>
             </div>
@@ -80,13 +80,15 @@
 
                 <div class='col-sm-4'>
                     Nama Lengkap <br>
-
+                    NIK <br>
                     Tempat / tgl.Lahir <br>
                     Jenis Kelamin <br>
-
+                    Bangsa/Agama <br>
                     Alamat <br>
                 </div>
                 <div class='col-sm-1'>
+                    : <br>
+                    : <br>
                     : <br>
                     : <br>
                     : <br>
@@ -98,58 +100,6 @@
                     test <br>
                     test <br>
                     test <br>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-2"></div>
-    </div>
-
-
-
-    <div class="row">
-        <div class='col-sm-2'></div>
-        <div class="col-sm-8">
-            <div>
-                <br>
-                <p>
-                    Telah meninggal dunia Tanggal 28 September 2001 Pukul 19.00 di Gulai Bancah dan dikuburkan di Gulai
-                    Bancah, Kota Bukittinggi.
-                    Surat keterangan ini dibuat berdasarkan keterangan pelapor :
-
-                </p>
-            </div>
-
-        </div>
-        <div class="col-sm-2"></div>
-    </div>
-
-
-
-
-    <div class="row">
-        <div class='col-sm-2'></div>
-        <div class="col-sm-8">
-            <div class='row'>
-
-                <div class='col-sm-4'>
-                    Nama Lengkap <br>
-
-                    Tempat / tgl.Lahir <br>
-                    Jenis Kelamin <br>
-
-                    Alamat <br>
-                </div>
-                <div class='col-sm-1'>
-                    : <br>
-                    : <br>
-                    : <br>
-                    : <br>
-
-                </div>
-                <div class='col-sm-3'>
-                    test <br>
-                    test <br>
                     test <br>
                     test <br>
 
@@ -159,22 +109,19 @@
         <div class="col-sm-2"></div>
     </div>
 
-
-
     <div class="row">
-        <div class='col-sm-2'></div>
+        <div class="col-sm-2"></div>
         <div class="col-sm-8">
-            <div>
-                <br>
-                <p>
-                    Hubungan pelapor dengan Almarhum : <b>Anak Kandung </b><br>
+            <br> <br>
+            <p>Nama yang tersebut di atas sepengetahuan kami selama berada di Jorong Sutijo, Nagari Kotogadang, Kec. IV
+                Koto, Kab. Agam berkelakuan baik dan tidak pernah terikat dengan minuman keras (narkoba) dan tidak
+                pernah dihukum karena tindak pidana.
+                Rekomendasi ini diberikan untuk <b><u>Pengurusan SKCK</u></b>.
+            </p>
 
-                    Demikianlah surat keterangan ini dibuat dengan sesungguhnya untuk dipergunakan sebagaimana mestinya.
 
 
-                </p>
-            </div>
-
+            <p>Demikianlah surat keterangan ini diberikan untuk dapat dipergunakan sebagaimana mestinya. </p>
         </div>
         <div class="col-sm-2"></div>
     </div>
@@ -183,23 +130,23 @@
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
             <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-6"></div>
-                <div class="col-sm-4" style="text-align:center;">
-                    Kotogadang, 11 Desember 2018 <br>
-                    a.n Wali Nagari Kotogadang <br>
-                    Sekretaris <br>
-                    <br> <br> <br>
+                <div class="col-sm-9"></div>
+                <div class="col-sm-3" style='text-align:center;'>
+                    Kotogadang, 19 Maret 2019 <br>
+                    An. Walinagari Koto Gadang <br>
+                    <br>
+                    <br>
 
+                    VIVI SUSANTI, S.Pt <br>
+                    Kasi Kesra <br>
 
-                    Octaviandra Putra, S.T
 
                 </div>
             </div>
         </div>
         <div class="col-sm-2"></div>
-
     </div>
+
 
 
 
