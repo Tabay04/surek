@@ -109,7 +109,13 @@ $hasil=get_skck($nik);
                     <?php echo $hasil['data'][0]['nama_lengkap'] ?><br>
                     <?php echo $hasil['data'][0]['nik'] ?> <br>
                     <?php echo $hasil['data'][0]['tempat_lahir']." Dan ".$hasil['data'][0]['tanggal_lahir'] ?> <br>
-                    <?php echo $hasil['data'][0]['jenis_kelamin'] ?> <br>
+                    <?php  if($hasil['data'][0]['jenis_kelamin']==0)
+                    {
+                        echo "Perempuan";
+                    }
+                    else
+                    
+                    {echo "Laki-Laki";}?> <br>
                     <?php echo "Indonesia/".$hasil['data'][0]['agama'] ?> <br>
                     Alamat Cari DI DB <br>
 
