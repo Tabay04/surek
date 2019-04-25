@@ -4,17 +4,12 @@ function get_skck($nik)
 {
     $niks=$nik;
     include 'connect.php';
-
     $result = pg_query($conn, "SELECT P.nik, P.no_kk, P.nama_lengkap, P.jenis_kelamin, P.tempat_lahir, P.tanggal_lahir, P.nama_lengkap_ibu, P.nama_lengkap_ayah, P.status_kawin, P.gol_darah, P.pendidikan_akhir, P.jenis_pekerjaan, P.status_hubkel, P.tanggal_entri, P.tanggal_ubah, P.agama, R.alamat
     FROM public.penduduk AS P
     LEFT JOIN kk as K ON P.no_kk=K.no_kk
     LEFT JOIN rumah as R ON R.id_rumah=K.id_rumah
     WHERE P.nik = '$niks';
     ");
-
-    $result = pg_query($conn, "SELECT nik, no_kk, nama_lengkap, jenis_kelamin, tempat_lahir, tanggal_lahir, nama_lengkap_ibu, nama_lengkap_ayah, status_kawin, gol_darah, pendidikan_akhir, jenis_pekerjaan, status_hubkel, tanggal_entri, tanggal_ubah, agama
-    FROM public.penduduk WHERE nik='$nik';");
-
     
     
     $hasil = array(
