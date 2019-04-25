@@ -2,7 +2,8 @@
 
 
 include '../../controller/getSKCK.php';
-$hasil=get_skck(1306054805650002);
+$nik=$_GET['nik'];
+$hasil=get_skck($nik);
 
 // var_dump($hasil['data']);
 
