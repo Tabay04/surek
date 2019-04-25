@@ -70,9 +70,10 @@ function getKeluarga($no_kk)
 'tanggal_ubah'=>$row['tanggal_ubah'],
 'agama'=>$row['agama']
 );
+array_push($hasil['data'], $data);
     }
 
-    array_push($hasil['data'], $data);
+    
     // var_dump($hasil);
     return $hasil;
 }
