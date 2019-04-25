@@ -1,3 +1,12 @@
+<?php
+
+
+include '../../controller/getSKCK.php';
+$hasil=get_skck('1306054805650002');
+
+ //var_dump($hasil['data']);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,13 +104,13 @@
                     : <br>
 
                 </div>
-                <div class='col-sm-3'>
-                    test <br>
-                    test <br>
-                    test <br>
-                    test <br>
-                    test <br>
-                    test <br>
+                <div class='col-sm-7'>
+                    <?php echo $hasil['data'][0]['nama_lengkap'] ?><br>
+                    <?php echo $hasil['data'][0]['nik'] ?> <br>
+                    <?php echo $hasil['data'][0]['tempat_lahir'].", ".$hasil['data'][0]['tanggal_lahir'] ?> <br>
+                    <?php echo $hasil['data'][0]['jenis_kelamin'] ?> <br>
+                    <?php echo "Indonesia / ".$hasil['data'][0]['agama'] ?> <br>
+                    <?php echo $hasil['data'][0]['alamat'] ?> <br>
 
                 </div>
             </div>
