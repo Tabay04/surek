@@ -4,7 +4,7 @@ function get_skck($nik)
 {
     include 'connect.php';
     $result = pg_query($conn, "SELECT nik, no_kk, nama_lengkap, jenis_kelamin, tempat_lahir, tanggal_lahir, nama_lengkap_ibu, nama_lengkap_ayah, status_kawin, gol_darah, pendidikan_akhir, jenis_pekerjaan, status_hubkel, tanggal_entri, tanggal_ubah, agama
-    FROM public.penduduk;");
+    FROM public.penduduk WHERE nik='$nik';");
     
     
     $hasil = array(
