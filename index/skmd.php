@@ -15,11 +15,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/dist/css/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 </head>
-
+<?php
+  include '../controller/connect.php';
+?>
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
@@ -35,13 +38,13 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="dashboard.php">
+          <li class="nav-item active ">
+            <a class="nav-link" href="dashboard.html">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item  ">
             <a class="nav-link" href="">
               <i class="material-icons">person</i>
               <p>Manage Citizen Data</p>
@@ -55,7 +58,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">Dashboard</a>
+            <a class="navbar-brand" href="#pablo">User Profile</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -117,115 +120,80 @@
         </div>
       </nav>
       <!-- End Navbar -->
-    <div class="content">
-          
-      <div class="row">
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K I M</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="pencarianNIK.php">
-                    <h4 class="card-title">Surat Keterangan Izin Menikah</h4>
-                  </a>   
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K B B</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="skbb.php">
-                    <h4 class="card-title">Surat Keterangan Berlakuan Baik</h4>
-                  </a>   
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K M D</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="skmd.php">
-                    <h4 class="card-title">Surat Keterangan Meninggal Dunia</h4>
-                  </a>   
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K T M</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="pencarianNIK.php">
-                    <h4 class="card-title">Surat Keterangan Tidak Mampu</h4>
-                  </a>   
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K Pe</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="pencarianNIK.php">
-                    <h4 class="card-title">Surat Keterangan Penghasilan</h4>
-                  </a>   
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K U</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="pencarianNIK.php">
-                    <h4 class="card-title">Surat Keterangan Usaha</h4>
-                  </a>   
-                </div>
-            </div>
-        </div>
       
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K Pi</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="pencarianNIK.php">
-                    <h4 class="card-title">Surat Keterangan Pindah</h4>
-                  </a>   
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <center>
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Surat Keterangan Meninggal Dunia</h4>
                 </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S B K</h3></center>
-              </div>
+                </center>
                 <div class="card-body">
-                  <a href="pencarianNIK.php">
-                    <h4 class="card-title">Surat B.... K....</h4>
-                  </a>   
+                <form action="../proses/form-skmd.php" method="post">
+                  <font>No. Surat:</font>
+                    <input type="text" class="form-control" name="" value="    /SKMD/2019">
+                  <br/>
+                  <font>NIK Warga Meninggal Dunia:</font>
+                  <select class="selectpicker form-control" id="nik" name="meninggal" data-container="body" data-live-search="true" title="PILIH NIK PENDUDUK" data-hide-disabled="true">
+                      <option value="0">Unknown</option>
+                        <?php                
+                            $sql_d=pg_query("SELECT nik, nama_lengkap FROM penduduk ORDER BY nama_lengkap");
+                            while($row = pg_fetch_assoc($sql_d))
+                            {
+                                echo"<option value=".$row['nik'].">(".$row['nik'].") ".$row['nama_lengkap']."</option>";
+                            }
+                        ?>
+                  </select>
+                  <br/><br/><br/>
+                  <font>NIK Pelapor:</font>
+                  <select class="selectpicker form-control" id="nik" name="lapor" data-container="body" data-live-search="true" title="PILIH NIK PENDUDUK" data-hide-disabled="true">
+                      <option value="0">Unknown</option>
+                        <?php                
+                            $sql_d=pg_query("SELECT nik, nama_lengkap FROM penduduk ORDER BY nama_lengkap");
+                            while($row = pg_fetch_assoc($sql_d))
+                            {
+                                echo"<option value=".$row['nik'].">(".$row['nik'].") ".$row['nama_lengkap']."</option>";
+                            }
+                        ?>
+                  </select>
+                  <br/><br/><br/>
+                  <font>Hubungan Pelapor dengan Almarhum:</font>
+                    <input type="text" class="form-control" name="">
+                  <br/><br/><br/>
+                  <font>Pegawai:</font>
+                  <select class="form-control" id="pegawai" title="PILIH PEGAWAI">
+                    <option></option>
+                        <?php                
+                            $sql_d=pg_query("SELECT id_pegawai, nama_pegawai FROM pegawai ORDER BY nama_pegawai");
+                            while($row = pg_fetch_assoc($sql_d))
+                            {
+                                echo"<option value=".$row['id_pegawai'].">".$row['nama_pegawai']."</option>";
+                            }
+                        ?>
+                  </select>
+                  <br/><br/>
+                  <input type="checkbox" name="">
+                  <font>Atas Nama</font>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                         
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <center><button type="submit" class="btn btn-primary btn-round">GO</button></center> -->
+                    <center><input type="submit" class="btn btn-primary btn-round" name="" value="GO !"></center>
+                    <div class="clearfix"></div>
+                  </form>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-
+      </div>
       <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
@@ -263,7 +231,7 @@
       </footer>
     </div>
   </div>
- <!--  <div class="fixed-plugin">
+  <!-- <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
       <a href="#" data-toggle="dropdown">
         <i class="fa fa-cog fa-2x"> </i>
@@ -545,13 +513,7 @@
       });
     });
   </script>
-  <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
-      md.initDashboardPageCharts();
-
-    });
-  </script>
 </body>
-
+<link rel="stylesheet" href="../../js/bootstrap.bundle.min.js" />
+<script src="../dist/js/bootstrap-select.js"></script>
 </html>
