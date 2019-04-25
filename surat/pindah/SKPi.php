@@ -152,10 +152,12 @@ $jumlah=count($keluarga['data']);
                     Test<br>
                     Test<br>
                     <br>
+                    <br>
                     Test<br>
                     Test<br>
                     Test<br>
-                    Test<br>
+                    test <br>
+                    test <br>
                     Alasan Pindah<br>
                     <?php echo $jumlah; ?>
                    
