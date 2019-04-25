@@ -1,3 +1,18 @@
+<?php
+include '../../controller/getSKPI.php';
+$nik=$_GET['nik'];
+$hasil=get_skpi($nik);
+// var_dump($hasil);
+$no_kk=$hasil['data'][0]['no_kk'];
+
+$keluarga=getKeluarga($no_kk);
+// var_dump($keluarga);
+
+$jumlah=count($keluarga['data']);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,6 +139,25 @@
 
                 </div>
                 <div class='col-sm-7'>
+                    <?php echo $hasil['data'][0]['nama_lengkap'] ?> <br>
+                    <?php echo $hasil['data'][0]['nik'] ?> <br>
+                    <?php echo $hasil['data'][0]['no_kk'] ?> <br>
+                    <?php echo $hasil['data'][0]['jenis_kelamin'] ?> <br>
+                    <?php echo $hasil['data'][0]['tempat_lahir'].$hasil['data'][0]['tanggal_lahir'] ?> <br>
+                    <?php echo $hasil['data'][0]['agama'] ?> <br>
+                    <?php echo "Indonesia"?> <br>
+                    <br>
+                    Test<br>
+                    Test<br>
+                    Test<br>
+                    Test<br>
+                    <br>
+                    Test<br>
+                    Test<br>
+                    Test<br>
+                    Test<br>
+                    Alasan Pindah<br>
+                    <?php echo $jumlah; ?>
                    
 
                 </div>
@@ -142,39 +176,19 @@
                 <th>L/P</th>
                 <th>Umur</th>
                 <th>Agama</th>
-
+               <?php
+               $i=0;
+              while ($i<$jumlah){ 
+              ?>
                 <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
+                    <td><?php echo $i+1; ?></td>
+                    <td><?php echo $keluarga['data'][$i]['nik'] ?></td>
+                    <td><?php echo $keluarga['data'][$i]['nama_lengkap'] ?></td>
+                    <td><?php echo $keluarga['data'][$i]['jenis_kelamin'] ?></td>
+                    <td>Umur</td>
+                    <td><?php echo $keluarga['data'][$i]['agama'] ?></td>
                 </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
+             <?php $i++; } ?>
 
 
             </table>
