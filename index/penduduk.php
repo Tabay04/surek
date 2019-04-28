@@ -140,7 +140,7 @@
                         <div class="form-group">
                           <label class="bmd-label-floating">N o. K K</label>
                           
-                          <select name="" id="no_kk">
+                          <select class="form-control" name="" id="no_kk">
                           <?php   
                            include '../controller/connect.php';             
                             $kk=pg_query($conn,"SELECT no_kk, id_rumah
