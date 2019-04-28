@@ -1,14 +1,13 @@
 <?php
 
-function get_skck($nik)
+function get_skmd($meninggal, $lapor)
 {
-    $niks=$nik;
-    include 'connect.php';
+    include '../../controller/connect.php';
     $result = pg_query($conn, "SELECT P.nik, P.no_kk, P.nama_lengkap, P.jenis_kelamin, P.tempat_lahir, P.tanggal_lahir, P.nama_lengkap_ibu, P.nama_lengkap_ayah, P.status_kawin, P.gol_darah, P.pendidikan_akhir, P.jenis_pekerjaan, P.status_hubkel, P.tanggal_entri, P.tanggal_ubah, P.agama, R.alamat
     FROM public.penduduk AS P
     LEFT JOIN kk as K ON P.no_kk=K.no_kk
     LEFT JOIN rumah as R ON R.id_rumah=K.id_rumah
-    WHERE P.nik = '$niks';
+    WHERE P.nik = '$meninggal';
     ");
     
     

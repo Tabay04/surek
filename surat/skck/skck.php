@@ -2,10 +2,10 @@
 
 
 include '../../controller/getSKCK.php';
-$nik=$_GET['nik'];
-$hasil=get_skck($nik);
 
-// var_dump($hasil['data']);
+$hasil=get_skck('1306054805650002');
+
+//var_dump($hasil['data']);
 
 ?>
 <!DOCTYPE html>
@@ -108,15 +108,11 @@ $hasil=get_skck($nik);
                 <div class='col-sm-7'>
                     <?php echo $hasil['data'][0]['nama_lengkap'] ?><br>
                     <?php echo $hasil['data'][0]['nik'] ?> <br>
-                    <?php echo $hasil['data'][0]['tempat_lahir']." Dan ".$hasil['data'][0]['tanggal_lahir'] ?> <br>
-                    <?php  if($hasil['data'][0]['jenis_kelamin']==0)
-                    {
-                        echo "Perempuan";
-                    }
-                    else
-                    
-                    {echo "Laki-Laki";}?> <br>
-                    <?php echo "Indonesia/".$hasil['data'][0]['agama'] ?> <br>
+
+                    <?php echo $hasil['data'][0]['tempat_lahir'].", ".$hasil['data'][0]['tanggal_lahir'] ?> <br>
+                    <?php echo $hasil['data'][0]['jenis_kelamin'] ?> <br>
+                    <?php echo "Indonesia / ".$hasil['data'][0]['agama'] ?> <br>
+                    <?php echo $hasil['data'][0]['alamat'] ?> <br>
                     Alamat Cari DI DB <br>
 
                 </div>

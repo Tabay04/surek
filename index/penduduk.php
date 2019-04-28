@@ -36,13 +36,13 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
+          <li class="nav-item">
             <a class="nav-link" href="dashboard.php">
               <i class="material-icons">dashboard</i>
               <p>Surat Menyurat</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link" href="penduduk.php">
               <i class="material-icons">person</i>
               <p>Kelola Data Kependudukan</p>
@@ -56,7 +56,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">Jenis Surat</a>
+            <a class="navbar-brand" href="#pablo">Kelola Data Kependudukan</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -118,142 +118,228 @@
         </div>
       </nav>
       <!-- End Navbar -->
-    <div class="content">
-          
-      <div class="row">
-
-      <!--   <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K I M</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="pencarianNIK.php">
-                    <h4 class="card-title">Surat Keterangan Izin Menikah</h4>
-                  </a>   
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Tambahkan Data Kependudukan</h4>
+                  <p class="card-category">Isikan Data dengan benar</p>
                 </div>
-            </div>
-        </div> -->
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K B B</h3></center>
-              </div>
                 <div class="card-body">
-                  <a href="skbb.php">
-                    <h4 class="card-title">Surat Keterangan Berlakuan Baik</h4>
-                  </a>   
+                  <form>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">N I K</label>
+                          <input type="text" name="nik" class="form-control" >
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">N o. K K</label>
+                          <input type="text" name="no_kk" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Nama Lengkap</label>
+                          <input type="email" nama="nama_lengkap" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                      
+                              <label for="jk">Jenis Kelamin:</label>
+                              <select class="form-control" id="jk">
+                                <option>Pria</option>
+                                <option>Wanita</option>
+                              </select>
+                  
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                         <label for="Agama">Agama:</label>
+                         
+                              <select class="form-control" id="Agama">
+                                <option>Islam</option>
+                                <option>Kristen Protestan</option>
+                                <option>Katolik</option>
+                                <option>Hindu</option>
+                                <option>Buddha</option>
+                                <option>Kong Hu Cu</option>
+                              </select>
+                          
+                        </div>
+                    </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="golda">Golongan Darah:</label>
+                         
+                              <select class="form-control" id="golda">
+                                <option>Tidak Tau</option>
+                                <option>A</option>
+                                <option>B</option>
+                                <option>AB</option>
+                                <option>O-</option>
+                                <option>O</option>
+                              </select>
+                        </div>
+                      </div>
+                      </div>
+
+                    <div class="row">
+                       <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Tempat Lahir</label>
+                          <input type="text" nama="tempat_lahir" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Tanggal Lahir</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  
+                  <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Nama Lengkap Ibu</label>
+                          <input type="text" nama="nama_lengkap_ibu" class="form-control">
+                        </div>
+                      </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Nama Lengkap Ayah</label>
+                          <input type="text" nama="nama_lengkap_ayah" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="staka">Status Kawin:</label>
+                         
+                              <select class="form-control" id="staka">
+                                <option>Belum Kawin</option>
+                                <option>Kawin</option>               
+                                <option>Cerai Hidup</option>
+                                <option>Cerai Mati</option>
+                              </select>	
+
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="pt">Pendidikan Terakhir:</label>
+                         
+                              <select class="form-control" id="pt">
+                              	<option>Tidak/Belum Sekolah</option>
+                                <option>Belum Tamat SD/Sederajat</option>
+                                <option>Tamat SD/Sederajat</option>
+                                <option>SLTP/Sederajat</option>
+                                <option>SLTA/Sederajat</option>
+                                <option>Diploma I</option>
+                                <option>Diploma II</option>
+                                <option>Diploma III</option>
+                                <option>Diploma IV/Sarjana I</option>
+                                <option>Sarjana II</option>
+                                <option>Sarjana III</option>
+                              </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="jp">Jenis Pekerjaan:</label>
+                         
+                              <select class="form-control" id="jp">
+                              	<option>ASN -Non PNS</option>
+                                <option>Belum/Tidak Bekerja</option>
+                                <option>Buruh Harian Lepas</option>
+                                <option>Buruh Nelayan</option>
+                                <option>Buruh Tani</option>
+                                <option>Dosen</option>
+                                <option>Guru</option>
+                                <option>Imam Mesjid</option>
+                                <option>Juru Masak</option>
+                                <option>Karyawan BUMD</option>
+                                <option>Karyawan BUMN</option>
+                                <option>Karyawan Honorer</option>
+                                <option>Karyawan Swasta</option>
+                                <option>Mekanik</option>
+                                <option>Mengurus Rumah Tangga</option>
+                                <option>Pelajar/Mahasiswa</option>
+                                <option>Karyawan Swasta</option>
+                                <option>Pedagang</option>
+                                <option>Pegawai Negeri Sipil</option>
+                                <option>Petani/Pekebun</option>
+                               
+                                <option>Sopir</option>
+                                
+                                <option>Tukang Batu</option>
+                                
+                                <option>Pensiun</option>
+                                <option>Lainnya</option>
+                                
+                              </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="shk">Status Hubungan Keluarga :</label>
+                         
+                              <select class="form-control" id="shk">
+                                <option>Kepala Keluarga</option>
+                                <option>Isteri</option>
+                                <option>Anak</option>
+                                <option>Cucu</option>
+                                <option>Mertua</option>
+                                <option>Famili Lain</option>
+                                <option>Orang Tua</option>
+                              </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Tanggal Entri</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Tanggal Ubah</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <button type="submit" name="submit" class="btn btn-primary pull-right">Tambah Data</button>
+                    <div class="clearfix"></div>
+                  </form>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K M D</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="skmd.php">
-                    <h4 class="card-title">Surat Keterangan Meninggal Dunia</h4>
-                  </a>   
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K T M</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="pencarianNIK.php">
-                    <h4 class="card-title">Surat Keterangan Tidak Mampu</h4>
-                  </a>   
-                </div>
-            </div>
-        </div>
-
-       <!--  <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K Pe</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="pencarianNIK.php">
-                    <h4 class="card-title">Surat Keterangan Penghasilan</h4>
-                  </a>   
-                </div>
-            </div>
-        </div> -->
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K U</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="pencarianNIK.php">
-                    <h4 class="card-title">Surat Keterangan Usaha</h4>
-                  </a>   
-                </div>
-            </div>
-        </div>
-      
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K Pi</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="pencarianNIK.php">
-                    <h4 class="card-title">Surat Keterangan Pindah</h4>
-                  </a>   
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S B K</h3></center>
-              </div>
-                <div class="card-body">
-                  <a href="pencarianNIK.php">
-                    <h4 class="card-title">Surat B.... K....</h4>
-                  </a>   
-                </div>
-            </div>
-        </div> -->
-        </div>
-
+      </div>
       <footer class="footer">
         <div class="container-fluid">
-          
-          <!-- <nav class="float-left">
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
-                </a>
-              </li>
-            </ul>
-          </nav> -->
           <div class="copyright float-right">
             &copy;
             <script>
@@ -265,75 +351,6 @@
       </footer>
     </div>
   </div>
-
- <!--  <div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-      <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
-      </a>
-      <ul class="dropdown-menu">
-        <li class="header-title"> Sidebar Filters</li>
-        <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger active-color">
-            <div class="badge-colors ml-auto mr-auto">
-              <span class="badge filter badge-purple" data-color="purple"></span>
-              <span class="badge filter badge-azure" data-color="azure"></span>
-              <span class="badge filter badge-green" data-color="green"></span>
-              <span class="badge filter badge-warning" data-color="orange"></span>
-              <span class="badge filter badge-danger" data-color="danger"></span>
-              <span class="badge filter badge-rose active" data-color="rose"></span>
-            </div>
-            <div class="clearfix"></div>
-          </a>
-        </li>
-        <li class="header-title">Images</li>
-        <li class="active">
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-1.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-2.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-3.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-4.jpg" alt="">
-          </a>
-        </li>
-        <li class="button-container">
-          <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
-        </li>
-        <li class="header-title">Want more components?</li>
-            <li class="button-container">
-                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
-                  Get the pro version
-                </a>
-            </li>
-        <li class="button-container">
-          <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
-            View Documentation
-          </a>
-        </li>
-        <li class="button-container github-star">
-          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-        </li>
-        <li class="header-title">Thank you for 95 shares!</li>
-        <li class="button-container text-center">
-          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
-          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
-          <br>
-          <br>
-        </li>
-      </ul>
-    </div>
-  </div> -->
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
@@ -347,13 +364,13 @@
   <script src="../assets/js/plugins/jquery.validate.min.js"></script>
   <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
   <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
-  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <!--  Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
   <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
   <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
   <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
   <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
   <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
-  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <!--  Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
   <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
   <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
   <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
@@ -546,13 +563,6 @@
 
         });
       });
-    });
-  </script>
-  <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
-      md.initDashboardPageCharts();
-
     });
   </script>
 </body>
