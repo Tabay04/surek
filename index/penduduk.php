@@ -139,7 +139,18 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">N o. K K</label>
-                          <input type="text" id='no_kk' name="no_kk" class="form-control">
+                          
+                          <select name="" id="no_kk">
+                          <?php   
+                           include '../controller/connect.php';             
+                            $kk=pg_query($conn,"SELECT no_kk, id_rumah
+                            FROM public.kk;");
+                            while($row = pg_fetch_assoc($kk))
+                            {
+                                echo"<option value='".$row['no_kk']."'>".$row['no_kk']."</option>";
+                            }
+                         ?>
+                          </select>
                         </div>
                       </div>
                       <div class="col-md-4">
