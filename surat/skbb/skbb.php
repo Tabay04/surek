@@ -113,8 +113,7 @@ $hasil=get_skck($nik);
                     <?php echo $hasil['data'][0]['jenis_kelamin'] ?> <br>
                     <?php echo "Indonesia / ".$hasil['data'][0]['agama'] ?> <br>
                     <?php echo $hasil['data'][0]['alamat'] ?> <br>
-                    Alamat Cari DI DB <br>
-
+                    
                 </div>
             </div>
         </div>
@@ -144,7 +143,7 @@ $hasil=get_skck($nik);
             <div class="row">
                 <div class="col-sm-9"></div>
                 <div class="col-sm-3" style='text-align:center;'>
-                    Kotogadang, 19 Maret 2019 <br>
+                    Kotogadang, 26 April 2019 <br>
                     An. Walinagari Koto Gadang <br>
                     <br>
                     <br>

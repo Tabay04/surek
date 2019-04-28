@@ -25,29 +25,30 @@
 ?>
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="black" data-image="../assets/img/sidebar-5.jpg">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo">
-        <a href="" class="simple-text logo-normal">
-          Surat Menyurat
-        </a>
+        <center> <img src="../image/Agam1.PNG" width="130px" height="160px" color="white"> <br>
+        <h3> SISUM </h3>
+          Sistem Informasi Surat Menyurat
+        </a></center>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active ">
-            <a class="nav-link" href="dashboard.html">
+            <a class="nav-link" href="dashboard.php">
               <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
+              <p>Surat Menyurat</p>
             </a>
           </li>
           <li class="nav-item  ">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="penduduk.php">
               <i class="material-icons">person</i>
-              <p>User Profile</p>
+              <p>Kelola Data Kependudukan</p>
             </a>
           </li>
         </ul>
@@ -58,7 +59,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">User Profile</a>
+            <a class="navbar-brand" href="#pablo">Surat Keterangan Berlakuan Baik</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -88,7 +89,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
+                 <!--  <span class="notification">5</span> -->
                   <p class="d-lg-none d-md-block">
                     Some Actions
                   </p>
