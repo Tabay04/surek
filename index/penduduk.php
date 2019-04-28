@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
@@ -133,19 +133,19 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">N I K</label>
-                          <input type="text" name="nik" class="form-control" >
+                          <input type="text" id='nik' name="nik" class="form-control" >
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">N o. K K</label>
-                          <input type="text" name="no_kk" class="form-control">
+                          <input type="text" id='no_kk' name="no_kk" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Nama Lengkap</label>
-                          <input type="email" nama="nama_lengkap" class="form-control">
+                          <input id='nama_lengkap' type="text" nama="nama_lengkap" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -165,7 +165,7 @@
                         <div class="form-group">
                          <label for="Agama">Agama:</label>
                          
-                              <select class="form-control" id="Agama">
+                              <select class="form-control" id="agama">
                                 <option>Islam</option>
                                 <option>Kristen Protestan</option>
                                 <option>Katolik</option>
@@ -197,13 +197,13 @@
                        <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Tempat Lahir</label>
-                          <input type="text" nama="tempat_lahir" class="form-control">
+                          <input type="text" id='tempat_lahir' nama="tempat_lahir" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Tanggal Lahir</label>
-                          <input type="text" class="form-control">
+                          <input type="text" id='tgl_lahir' class="form-control">
                         </div>
                       </div>
                     </div>
@@ -212,14 +212,14 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Nama Lengkap Ibu</label>
-                          <input type="text" nama="nama_lengkap_ibu" class="form-control">
+                          <input type="text" id='nama_ibu' nama="nama_lengkap_ibu" class="form-control">
                         </div>
                       </div>
                     
                     <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Nama Lengkap Ayah</label>
-                          <input type="text" nama="nama_lengkap_ayah" class="form-control">
+                          <input type="text" id='nama_ayah' nama="nama_lengkap_ayah" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -316,20 +316,14 @@
                     <div class="row">
                       <div class="col-md-6">
 
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Tanggal Entri</label>
-                          <input type="text" class="form-control">
-                        </div>
+                      
                       </div>
                       <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Tanggal Ubah</label>
-                          <input type="text" class="form-control">
-                        </div>
+                        
                       </div>
                     </div>
                     
-                    <button type="submit" name="submit" class="btn btn-primary pull-right">Tambah Data</button>
+                    <button onclick='tambahData()' type="button" name="submit" class="btn btn-primary pull-right">Tambah Data</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
@@ -352,6 +346,32 @@
     </div>
   </div>
   <!--   Core JS Files   -->
+
+  <script>
+  
+  function tambahData()
+  {
+    nama_lengkap=document.getElementById('nama_lengkap').value;
+    jk=document.getElementById('jk').value;
+    agama=document.getElementById('agama').value;
+    tempat_lahir=document.getElementById('tempat_lahir').value;
+    nama_ibu=document.getElementById('nama_ibu').value;
+    nama_ayah=document.getElementById('nama_ayah').value;
+    staka=document.getElementById('staka').value;
+    pt=document.getElementById('pt').value;
+    jp=document.getElementById('jp').value;
+    shk=document.getElementById('shk').value;
+    golda=document.getElementById('golda').value;
+    nik=document.getElementById('nik').value;
+    no_kk=document.getElementById('no_kk').value;
+    tgl_lahir=document.getElementById('tgl_lahir').value;
+
+    window.location="../controller/tambah_update.php?nama_lengkap="+nama_lengkap+"&jk="+jk+"&agama="
+    +agama+"&tempat_lahir="+tempat_lahir+"&nama_ibu="+nama_ibu+"&nama_ayah="+nama_ayah+"&staka="+staka
+    +"&pt="+pt+"&jp="+jp+"&shk="+shk+"&golda="+golda+"&nik="+nik+"&no_kk="+no_kk+"&tgl_lahir="+tgl_lahir;
+  }
+
+  </script>
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
@@ -384,8 +404,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
   <!-- Library for adding dinamically elements -->
   <script src="../assets/js/plugins/arrive.min.js"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+ 
   <!-- Chartist JS -->
   <script src="../assets/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
