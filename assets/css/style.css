@@ -1,0 +1,18 @@
+/*.btn-light{
+	background-color: white !important;
+}
+button.btn{
+	border: 1px solid purple;
+}
+button.btn:hover{
+	background-color: purple !important;
+}*/
+
+.card .card-header-ungu .card-icon,
+.card .card-header-ungu .card-text,
+.card .card-header-ungu:not(.card-header-icon):not(.card-header-text),
+.card.bg-ungu,
+.card.card-rotate.bg-ungu .front,
+.card.card-rotate.bg-ungu .back {
+  background: linear-gradient(60deg, #ab47bc, #8e24aa) !important;
+}
