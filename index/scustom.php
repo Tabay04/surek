@@ -18,10 +18,11 @@
   include "../controller/connect.php";
 
 ?>
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <script type="text/javascript" src="checkNumber.js"></script>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/surat.png">
@@ -35,19 +36,23 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="../css/loading.css">
-
-  <style type="text/css">
+  <link rel="stylesheet" href="../assets/dist/css/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/loading.css">
+    <style type="text/css">
        .satu {
        color: white; 
        }
+       .dua{
+        color: purple;
+       }
   </style>
 </head>
-
+<?php
+  include '../controller/connect.php';
+?>
 <body class="">
   <div id="containerdot">
       <div class="dot dot1"></div> &nbsp; &nbsp;
@@ -56,12 +61,7 @@
     </div>
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="black" data-image="../assets/img/sidebar-5.jpg">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
-      <div class="logo">
+     <div class="logo">
        <center class="satu"> <img src="../image/Agam1.PNG" width="130px" height="160px" color="white"> <br>
         <h3> SISUM </h3>
           Sistem Informasi Surat Menyurat
@@ -89,7 +89,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="suratmenyurat.php">Jenis Surat</a>
+            <a class="navbar-brand" href="suratmenyurat.php">Back</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -97,7 +97,7 @@
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
-         <div class="collapse navbar-collapse justify-content-end">
+          <div class="collapse navbar-collapse justify-content-end">
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -107,7 +107,7 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="profiladmin.php">Profile</a>
+                  <a class="dropdown-item" href="#">Profile</a>
                   <!-- <a class="dropdown-item" href="#">Settings</a> -->
                   <div class="dropdown-divider"></div>
                    <a class="dropdown-item" href="logout.php">Log out</a>
@@ -118,126 +118,157 @@
         </div>
       </nav>
       <!-- End Navbar -->
-    <div class="content">
-      <!-- <div class="row">
-        <div class="col-md-10"></div> &nbsp &nbsp &nbsp &nbsp
-        <div class="col-md-1">
-          <a href="form.php">
-            <button class="btn btn-primary" >Tambah</button>
-          </a>  
-        </div> 
-      </div> --> 
-      <div class="row">
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K B B</h3></center>
-              </div>
-                <div class="card-body">
-                  <h4><a href="skbb.php">Surat Keterangan Berlakuan Baik</a></h4>
-               <!--    <a href="skbb.php">
-                    <h4 class="card-title">Surat Keterangan Berlakuan Baik</h4>
-                  </a>  -->  
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K M D</h3></center>
-              </div>
-                <div class="card-body">
-                  <h4><a href="skmd.php">Surat Keterangan Meninggal Dunia</a></h4>
-                  <!-- <a href="skmd.php">
-                    <h4 class="card-title">Surat Keterangan Meninggal Dunia</h4>
-                  </a>  -->  
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K T M</h3></center>
-              </div>
-                <div class="card-body">
-                  <h4><a href="sktm.php">Surat Keterangan Tidak Mampu</a></h4>
-                  <!-- <a href="sktm.php">
-                    <h4 class="card-title">Surat Keterangan Tidak Mampu</h4>
-                  </a>    -->
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">S K U</h3></center>
-              </div>
-                <div class="card-body">
-                  <h4><a href="sku.php">Surat Keterangan Usaha</a></h4>
-                  <!-- <a href="sku.php">
-                    <h4 class="card-title">Surat Keterangan Usaha</h4>
-                  </a>   --> 
-                </div>
-            </div>
-        </div>
-        </div>
-
-        <div class="row">
-        <div class="col-md-3">
-            <div class="card">
-              <div class="card-header card-header-tabs card-header-primary">
-                <center><h3 class="card-title">CUSTOM</h3></center>
-              </div>
-                <div class="card-body">
-                  <h4><a href="scustom.php">Edit Surat</a></h4>
-               <!--    <a href="skbb.php">
-                    <h4 class="card-title">Surat Keterangan Berlakuan Baik</h4>
-                  </a>  -->  
-                </div>
-            </div>
-        </div>
-        </div>
-        <!-- <div class="row">
-          <div class="col-md-3">
+      
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
               <div class="card">
-                <div class="card-header card-header-tabs card-header-primary">
-                  <center><h3 class="card-title">S C</h3></center>
+                <center>
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Surat Custom</h4>
                 </div>
-                  <div class="card-body">
-                    <a href="index.php">
-                      <h4 class="card-title">Surat Custom</h4>
-                    </a>   
-                  </div>
+                </center>
+                <div class="card-body">
+                <form action="../proses/form-custom.php" method="post">
+                 <!--  <?php                
+                      // $sql_s=pg_query("SELECT count(no_surat) as no FROM skbb");
+                      // while($row = pg_fetch_assoc($sql_s))
+                      // {
+                      //     $no=$row['no']+1;
+                      // }
+                  ?> -->
+
+                 <!--  <?php
+                    // $sql_1=pg_query("SELECT COUNT(*) AS skbb FROM skbb WHERE date_part('year', tanggal) =     date_part('year', NOW())");
+                    // $row1 = pg_fetch_assoc($sql_1);
+
+                    // $sql_2=pg_query("SELECT COUNT(*) AS sktm FROM sktm WHERE date_part('year', tanggal) =     date_part('year', NOW())");
+                    // $row2 = pg_fetch_assoc($sql_2);
+
+                    // $sql_3=pg_query("SELECT COUNT(*) AS sku FROM sku WHERE date_part('year', tanggal) =     date_part('year', NOW())");
+                    // $row3 = pg_fetch_assoc($sql_3);
+
+                    // $sql_4=pg_query("SELECT COUNT(*) AS skmd FROM skmd WHERE date_part('year', tanggal) =     date_part('year', NOW())");
+                    // $row4 = pg_fetch_assoc($sql_4);
+
+                    // $no = $row1['skbb'] + $row2['sktm'] + $row3['sku'] + $row4['skmd'] + 1;
+                    // var_dump($no); exit();
+                  ?> -->
+
+                  <?php                
+                      $sql_s=pg_query("SELECT no_surat as no FROM setting");
+                      while($row = pg_fetch_assoc($sql_s))
+                      {
+                          $no=$row['no'];
+                      }
+                  ?>
+
+                  <font>No. Surat:</font>
+                  <br>
+                  <input type="hidden" name="temp" id="temp" value="500 / 0<?php echo $no ?> / RSKB / 2020">
+                  <button class="btn btn-primary" onclick="maxSetting()">Nomor Setting</button>
+                  <script type="text/javascript">
+                    
+                    function maxSetting()
+                    {
+                        let target1=document.getElementById("no_surat");
+                        let dataAwal=document.getElementById("temp").value;
+                        target1.value=dataAwal;
+                    }
+
+                  </script>
+                  <button class="btn btn-primary" onclick="checkNomor()">Nomor Terakhir</button>
+                   
+                    <input id="no_surat" type="text" class="form-control" required name="no_surat" value="500 / 0<?php echo $no ?> / RSKB / 2020">
+
+                  <br/>
+
+                  <select class="selectpicker form-control" id="nik" name="nik" data-container="body" data-live-search="true" required title="PILIH NIK PENDUDUK" data-hide-disabled="true" onchange="konten()">
+                        <?php                
+                            $sql_d=pg_query("SELECT nik, nama_lengkap, alamat, tempat_lahir, tanggal_lahir, jenis_kelamin, agama 
+                              FROM penduduk  as P
+                              LEFT JOIN kk as K ON P.no_kk=K.no_kk
+                              LEFT JOIN rumah as R ON R.id_rumah=K.id_rumah
+                              ORDER BY nama_lengkap");
+                            while($row = pg_fetch_assoc($sql_d))
+                            {
+                                echo'<option value="'.$row['nama_lengkap'].'__'.$row['nik'].'__'.$row['alamat'].'__'.$row['tempat_lahir'].'__'.$row['tanggal_lahir'].'__'.$row['jenis_kelamin'].'__'.$row['agama'].'">('.$row['nik'].") ".$row['nama_lengkap']."</option>";
+                            }
+                        ?>
+                  </select>
+                  <script type="text/javascript">
+                    function konten() {
+                      let string = document.getElementById("nik").value;
+                      let data = string.split("__");
+                       let jenis_kelamin="";
+                      if (data[5]==1) {
+                        jenis_kelamin="Laki-laki";
+                      }
+                      else {
+                        jenis_kelamin="Perempuan";
+                      }
+                      document.getElementById("isi_konten").value=`
+                                      Yang bertanda tangan di bawah ini, Wali Nagari Kotogadang, Kecamatan IV Koto, Kabupaten Agam, dengan
+                      ini menerangkan bahwa :
+                      Nama                            : ${data[0]}
+                      NIK                                : ${data[1]}
+                      Tempat/tanggal lahir : ${data[3]} / ${data[4]}
+                      Jenis Kelamin             : ${jenis_kelamin}
+                      Agama                          : ${data[6]}
+                      Alamat                          : ${data[2]}
+
+                                      Nama yang tersebut di atas sepengetahuan kami selama berada di Nagari Kotogadang, Kec. IV
+                    Koto, Kab. Agam _____________. Rekomendasi ini diberikan untuk 
+
+                                      Demikianlah surat keterangan ini diberikan untuk dapat dipergunakan sebagaimana mestinya.
+                      `;
+                    }
+                  </script>
+                  <br/><br/><br/>
+
+                  <font>Judul Surat:</font>
+                    <input type="text" required class="form-control" name="judul_surat">  
+                  <br/><br/>
+
+                  <font>Custom:</font>
+                   <textarea required class="form-control" name="Custom" rows="10" id="isi_konten">
+                      
+                    </textarea>
+                  <br/><br/>
+                  <font>Pegawai:</font>
+                  <select class="form-control" required id="pegawai" title="PILIH PEGAWAI" name="pegawai">
+                        <?php                
+                            $sql_d=pg_query("SELECT id_pegawai, nama_pegawai FROM pegawai ORDER BY nama_pegawai");
+                            while($row = pg_fetch_assoc($sql_d))
+                            {
+                                echo"<option value=".$row['id_pegawai'].">".$row['nama_pegawai']."</option>";
+                            }
+                        ?>
+                  </select>
+                  <br/><br/>
+                  <input type="checkbox" name="status">
+                  <font>Atas Nama</font>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                         
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <center><button type="submit" class="btn btn-primary btn-round">GO</button></center> -->
+                    <center><input type="submit" class="btn btn-primary btn-round" name="" value="GO !"></center>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
               </div>
-          </div>
-        </div> -->
-        <br>
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="col-md-4">
-            <input type="number" name="no_surat" id="no_surat" class="form-control" placeholder="Setting Nomor Surat">
-            <center><button class="btn btn-primary" onclick="save()">Input</button>
+            </div>
           </div>
         </div>
-
-        <script>
-          
-          function save()
-          {
-            var no_surat=document.getElementById("no_surat").value;
-            if(no_surat!="")
-            {
-                 $.ajax({url: "../controller/saveNomor.php?nomor="+no_surat, success: function(result){
-                          alert(result);
-                      }});
-            }
-          }
-
-        </script>
+      </div>
     </div>
   </div>
+  
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
@@ -453,20 +484,14 @@
     });
   </script>
   <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
-      md.initDashboardPageCharts();
-
-    });
-  </script>
-  <script>
     var containerdot = document.getElementById('containerdot');
     window.addEventListener('load', function(){
         containerdot.style.display="none";
     });
   </script>
 </body>
-
+<link rel="stylesheet" href="../../js/bootstrap.bundle.min.js" />
+<script src="../dist/js/bootstrap-select.js"></script>
 </html>
 <?php 
   pg_close($conn);

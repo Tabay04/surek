@@ -176,6 +176,13 @@ include "../controller/connect.php";
                           LEFT JOIN kk as K ON P.no_kk=K.no_kk
                           LEFT JOIN rumah as R ON R.id_rumah=K.id_rumah");
 
+                          $sql_custom = pg_query("SELECT S.no_surat, S.tanggal, PG.nama_pegawai, PG.jabatan, P.nik, P.no_kk, P.nama_lengkap, P.jenis_kelamin, P.tempat_lahir, P.tanggal_lahir, P.nama_lengkap_ibu, P.nama_lengkap_ayah, P.status_kawin, P.gol_darah, P.pendidikan_akhir, P.jenis_pekerjaan, P.status_hubkel, P.tanggal_entri, P.tanggal_ubah, P.agama, R.alamat
+                          FROM public.scustom AS S
+                          LEFT JOIN penduduk as P ON S.nik=P.nik
+                          LEFT JOIN pegawai as PG ON S.id_pegawai=PG.id_pegawai
+                          LEFT JOIN kk as K ON P.no_kk=K.no_kk
+                          LEFT JOIN rumah as R ON R.id_rumah=K.id_rumah");
+
                         $no=1;
 
                         while ($data=pg_fetch_assoc($sql)) {
@@ -250,6 +257,26 @@ include "../controller/connect.php";
                             echo "<td>".$data_sku['nama_pegawai']."</td>";
 
                             echo '<td><center> <a class="material-icons" target="_blank" href="../surat/sku/sku.php?no='.$data_sku['no_surat'].'">insert_drive_file</a>
+                                
+                             </center></td>';
+
+                            echo "</tr>";
+                            // <a class="material-icons" target="_blank" href="../surat/skbb/skbb.php?no='.$data['no_surat'].'&download=1" title="download yuang">arrow_drop_down_circle</a>
+                            $no++;
+                          }
+
+                          while ($data_sku=pg_fetch_assoc($sql_custom)) {
+                            
+                            $nos=$data['no_surat'];
+                            echo "<tr>";
+                            echo "<td>".$no."</td>";
+                            echo "<td>".$data_sku['no_surat']."</td>";
+                            echo "<td>".$data_sku['nik']."</td>";
+                            echo "<td>".$data_sku['nama_lengkap']."</td>";
+                            echo "<td>".$data_sku['tanggal']."</td>";
+                            echo "<td>".$data_sku['nama_pegawai']."</td>";
+
+                            echo '<td><center> <a class="material-icons" target="_blank" href="../surat/custom/custom.php?no='.$data_sku['no_surat'].'">insert_drive_file</a>
                                 
                              </center></td>';
 
