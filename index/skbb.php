@@ -89,7 +89,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="suratmenyurat.php">Back</a>
+            <a class="navbar-brand" href="suratmenyuratadmin.php">Back</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -107,7 +107,7 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="profiladmin.php">Profile</a>
                   <!-- <a class="dropdown-item" href="#">Settings</a> -->
                   <div class="dropdown-divider"></div>
                    <a class="dropdown-item" href="logout.php">Log out</a>
@@ -166,7 +166,7 @@
 
                   <font>No. Surat:</font>
                   <br>
-                  <input type="hidden" name="temp" id="temp" value="500 / 0<?php echo $no ?> / RSKB / 2020">
+                  <input type="hidden" name="temp" id="temp" value="500 / 0<?php echo $no ?> / RSKB / 2021">
                   <button class="btn btn-primary" onclick="maxSetting()">Nomor Setting</button>
                   <script type="text/javascript">
                     
@@ -180,7 +180,7 @@
                   </script>
                   <button class="btn btn-primary" onclick="checkNomor()">Nomor Terakhir</button>
                    
-                    <input id="no_surat" type="text" class="form-control" required name="no_surat" value="500 / 0<?php echo $no ?> / RSKB / 2020">
+                    <input id="no_surat" type="text" class="form-control" readonly required name="no_surat" value="500 / 0<?php echo $no ?> / RSKB / 2021">
 
                   <br/>
 
@@ -193,16 +193,16 @@
                             }
                         ?>
                   </select>
-                  <br/><br/><br/>
+                  <!-- <br/><br/><br/>
                   <font>Pilih Kelakuan:</font>
                   <select class="form-control" required id="kelakuan" title="PILIH KELAKUAN" name="kelakuan">
                     <option value="1">Berkelakuan Baik</option>
-                    <option value="1">Berkelakuan Tidak Baik</option>
-                  </select>
+                    <option value="2">Berkelakuan Tidak Baik</option>
+                  </select> -->
                   <br/><br/><br/>
                   <font>Untuk Keperluan:</font>
                     <input type="text" required class="form-control" name="untuk">
-                  <br/><br/><br/>
+                  <br/><br/><!-- <br/> -->
                   <font>Pegawai:</font>
                   <select class="form-control" required id="pegawai" title="PILIH PEGAWAI" name="pegawai">
                         <?php                

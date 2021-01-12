@@ -89,7 +89,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="suratmenyurat.php">Back</a>
+            <a class="navbar-brand" href="suratmenyuratadmin.php">Back</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -107,7 +107,7 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="profiladmin.php">Profile</a>
                   <!-- <a class="dropdown-item" href="#">Settings</a> -->
                   <div class="dropdown-divider"></div>
                    <a class="dropdown-item" href="logout.php">Log out</a>
@@ -166,7 +166,7 @@
 
                   <font>No. Surat:</font>
                   <br>
-                  <input type="hidden" name="temp" id="temp" value="500 / 0<?php echo $no ?> / RSKB / 2020">
+                  <input type="hidden" name="temp" id="temp" value="500 / 0<?php echo $no ?> / RSKB / 2021">
                   <button class="btn btn-primary" onclick="maxSetting()">Nomor Setting</button>
                   <script type="text/javascript">
                     
@@ -180,7 +180,7 @@
                   </script>
                   <button class="btn btn-primary" onclick="checkNomor()">Nomor Terakhir</button>
                    
-                    <input id="no_surat" type="text" class="form-control" required name="no_surat" value="500 / 0<?php echo $no ?> / RSKB / 2020">
+                    <input id="no_surat" type="text" class="form-control" required name="no_surat" value="500 / 0<?php echo $no ?> / RSKB / 2021">
 
                   <br/>
 
@@ -209,19 +209,21 @@
                         jenis_kelamin="Perempuan";
                       }
                       document.getElementById("isi_konten").value=`
-                                      Yang bertanda tangan di bawah ini, Wali Nagari Kotogadang, Kecamatan IV Koto, Kabupaten Agam, dengan
-                      ini menerangkan bahwa :
-                      Nama                            : ${data[0]}
-                      NIK                                : ${data[1]}
-                      Tempat/tanggal lahir : ${data[3]} / ${data[4]}
-                      Jenis Kelamin             : ${jenis_kelamin}
-                      Agama                          : ${data[6]}
-                      Alamat                          : ${data[2]}
+                                          Yang bertanda tangan di bawah ini, Wali Nagari Kotogadang, Kecamatan IV Koto, Kabupaten Agam, dengan ini 
+                          menerangkan bahwa :
 
-                                      Nama yang tersebut di atas sepengetahuan kami selama berada di Nagari Kotogadang, Kec. IV
-                    Koto, Kab. Agam _____________. Rekomendasi ini diberikan untuk 
+                                          Nama Lengkap                           :                  ${data[0]}
+                                          NIK                                            :                  ${data[1]}
+                                          Tempat / tanggal lahir                :                  ${data[3]} / ${data[4]}
+                                          Jenis Kelamin                            :                  ${jenis_kelamin}
+                                          Agama                                       :                  ${data[6]}
+                                          Alamat                                       :                  ${data[2]}
 
-                                      Demikianlah surat keterangan ini diberikan untuk dapat dipergunakan sebagaimana mestinya.
+
+                                          Nama yang tersebut di atas sepengetahuan kami selama berada di Nagari Kotogadang, Kec. IV Koto, Kab. Agam
+                          _____________. Rekomendasi ini diberikan untuk 
+
+                                          Demikianlah surat keterangan ini diberikan untuk dapat dipergunakan sebagaimana mestinya.
                       `;
                     }
                   </script>

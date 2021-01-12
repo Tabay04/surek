@@ -115,9 +115,9 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
+                  <!-- <a class="dropdown-item" href="profile">Profile</a> -->
                   <!-- <a class="dropdown-item" href="#">Settings</a> -->
-                  <div class="dropdown-divider"></div>
+                  <!-- <div class="dropdown-divider"></div> -->
                   <a class="dropdown-item" href="logout.php">Log out</a>
                 </div>
               </li>
@@ -303,28 +303,28 @@
                                         </div>
                                       </div>
                                     </div>';
-                                    echo
-                                    '<button type="button" rel="tooltip" title="Hapus" class="btn btn-danger btn-link btn-sm hapus" data-toggle="modal" data-target=" #hapus" data-id="'.$admin['id_admin'].'" >
-                                    <i class="material-icons">close</i>
-                                    </button>
-                                    <div class="modal fade" id="hapus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Anda Yakin Untuk Menghapus data?</h5>
-                                            <button class="close" type="submit" data-dismiss="modal" aria-label="Close" href="../proses/hapusadmin.php?id='.$admin['id_admin'].'>
-                                            <span aria-hidden="true">×</span>
-                                            </button>
-                                          </div>
-                                          <div class="modal-body">Pilih "Hapus" dibawah jika anda ingin menghapus datanya.</div>
-                                          <div class="modal-footer">
-                                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                            <a id="id_adm" href="../proses/hapusadmin.php?id='.$admin['id_admin'].'">
-                                            <button class="btn btn-danger" name="hapus" type="submit" value="Hapus" >Hapus</button></a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>';
+                                    // echo
+                                    // '<button type="button" rel="tooltip" title="Hapus" class="btn btn-danger btn-link btn-sm hapus" data-toggle="modal" data-target=" #hapus" data-id="'.$admin['id_admin'].'" >
+                                    // <i class="material-icons">close</i>
+                                    // </button>
+                                    // <div class="modal fade" id="hapus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    //   <div class="modal-dialog" role="document">
+                                    //     <div class="modal-content">
+                                    //       <div class="modal-header">
+                                    //         <h5 class="modal-title" id="exampleModalLabel">Anda Yakin Untuk Menghapus data?</h5>
+                                    //         <button class="close" type="submit" data-dismiss="modal" aria-label="Close" href="../proses/hapusadmin.php?id='.$admin['id_admin'].'>
+                                    //         <span aria-hidden="true">×</span>
+                                    //         </button>
+                                    //       </div>
+                                    //       <div class="modal-body">Pilih "Hapus" dibawah jika anda ingin menghapus datanya.</div>
+                                    //       <div class="modal-footer">
+                                    //         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                    //         <a id="id_adm" href="../proses/hapusadmin.php?id='.$admin['id_admin'].'">
+                                    //         <button class="btn btn-danger" name="hapus" type="submit" value="Hapus" >Hapus</button></a>
+                                    //       </div>
+                                    //     </div>
+                                    //   </div>
+                                    // </div>';
                                   echo "</td>";
                                 echo "</tr>";
                                 }
@@ -596,27 +596,29 @@
     // CHANGE STATUS ADMIN -----------------------------------------------------------------
 
     $(".status-admin").click(function(){
-    var nilai;
+    var nilai; //nilai status yang akan diberikan
     var text = $(this).text();
     var element = $(this);
     console.log($(this).text());
 
-    if ($(this).text() == "aktif") {
+    //check current value
+
+    if ($(this).text() == "aktif") { //saat ini 1
       nilai = '2'; //non aktif
     }else{
       nilai = '1'; //aktif
     }
       
       console.log(nilai);
-      var id = $(this).parent().parent().parent().find(".id-admin").text();
-      var url = '../controller/changeStatus.php?status='+nilai+'&id='+id;
+      var id = $(this).parent().parent().parent().find(".id-admin").text(); //variable mendapatkan nilai id
+      var url = '../controller/changeStatus.php?status='+nilai+'&id='+id; //url API
       console.log(url);
        $.ajax({url: url, data: "", context: this, dataType: 'text', success: function(e){
-         if ($(this).text() != "aktif") {
+         if ($(this).text() != "aktif") { //apabila teks aktif, maka
           
-          $(this).removeClass('btn-danger').addClass('btn-success');
-           $(this).empty();
-           $(this).html("aktif");
+          $(this).removeClass('btn-danger').addClass('btn-success'); //hapus class btn-danger ubah menjadi btn-success
+           $(this).empty(); //mengkosongkan tulisan element button
+           $(this).html("aktif"); //mengisi element button dengan teks aktif
         }else{
           $(this).removeClass('btn-success').addClass('btn-danger');
           $(this).empty();

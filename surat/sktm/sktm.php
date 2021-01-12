@@ -216,7 +216,8 @@ $hasil=get_skmd($no);
                         // var_dump($ibu); exit();
                     ?>
                     <?php echo $hasil['data'][0]['nama_lengkap_ibu'] ?><br>
-                    <?php echo $ibu['jenis_kelamin'] ?> <br>
+                    <!-- <?php echo $ibu['jenis_kelamin'] ?> <br> -->
+                    <?php echo 'Perempuan' ?> <br>
                     <?php $pecah = explode("-", $ibu['tanggal_lahir']) ?>
                     <?php echo $ibu['tempat_lahir'].", ".$pecah[2]." ".$bulan[$pecah[1]]." ".$pecah[0]; ?> <br>
                     <?php echo $ibu['agama'] ?> <br>
@@ -229,7 +230,8 @@ $hasil=get_skmd($no);
                         // var_dump($ayah); exit();
                     ?>
                     <?php echo $hasil['data'][0]['nama_lengkap_ayah'] ?><br>
-                    <?php echo $ayah['jenis_kelamin'] ?> <br>
+                    <!-- <?php echo $ayah['jenis_kelamin'] ?> <br> -->
+                    <?php echo 'Laki-laki'?> <br>
                     <?php $pecah = explode("-", $ayah['tanggal_lahir']) ?>
                     <?php echo $ayah['tempat_lahir'].", ".$pecah[2]." ".$bulan[$pecah[1]]." ".$pecah[0]; ?> <br>
                     <?php echo $ayah['agama'] ?> <br>

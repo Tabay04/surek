@@ -119,9 +119,9 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
+                  <!-- <a class="dropdown-item" href="profile">Profile</a> -->
                   <!-- <a class="dropdown-item" href="#">Settings</a> -->
-                  <div class="dropdown-divider"></div>
+                  <!-- <div class="dropdown-divider"></div> -->
                    <a class="dropdown-item" href="logout.php">Log out</a>
                 </div>
               </li>
@@ -139,12 +139,12 @@
           </a>  
         </div> 
       </div> --> 
-       <div class="row">
+      <!--  <div class="row">
         <div class="col-md-12">
           <center>
           <a href="form.php" class=" btn btn-primary" > <b style="font-size: 18px">+</b>&nbsp;&nbsp; Tambah Jenis Surat Baru</a>
         </div>
-      </div>
+      </div> -->
       <br>
 
       <div class="row">

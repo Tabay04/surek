@@ -10,11 +10,9 @@
 
 	if ($sql) {
 		echo '<meta http-equiv="refresh" content="0.1;url=../index/pegawai.php?edit='.$namapeg.'"/>';
-		//echo $sql;
 	}
 	else {
 		echo "<script>alert('gagal!')</script>";
-		//echo '<meta http-equiv="refresh" content="0.1;url=../index/skbb.php">';
 	}
 	
 

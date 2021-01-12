@@ -9,7 +9,7 @@
 		$id= $data["id"]+1;
 	}
 
-	$sql = pg_query("INSERT INTO admin (id_admin, username, password) VALUES ('$id', '$user', '$pw')");
+	$sql = pg_query("INSERT INTO admin (id_admin, username, password, statusakun) VALUES ('$id', '$user', '$pw', 2)");
 
 	if ($sql) {
 		echo '<meta http-equiv="refresh" content="0.1;url=../index/kelolaadmin.php?sukses='.$user.'"/>';

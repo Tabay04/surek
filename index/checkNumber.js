@@ -100,12 +100,37 @@ function checkNomor() {
         }
     });
 
+    let maxSCUSTOM = 0;
+    // Nyari SCUSTOM
+    $.ajax({
+        url: "../controller/selectMaxSCUSTOM.php",
+        async: false,
+        success: function(result) {
+            var resultSCUSTOM = JSON.parse(result);
+            var length = resultSCUSTOM.features.length;
+            var resultSplit;
+            let dataArray = new Array();
+
+
+            var i = 0;
+            while (i < length) {
+
+                resultSplit = resultSCUSTOM.features[i].properties.no_surat.split("/");
+                if (resultSplit[1] > maxSCUSTOM) {
+                    maxSCUSTOM = resultSplit[1];
+                }
+                i++;
+            }
+        }
+    });
+
 
     let data = new Array();
     data.push(maxSKBB);
     data.push(maxSKMD);
     data.push(maxSKU);
     data.push(maxSKTM);
+    data.push(maxSCUSTOM);
 
     console.log(data);
     let finalMax = Math.max.apply(null, data);
@@ -134,6 +159,6 @@ function checkNomor() {
 
 
     // String Builder
-
-
+    let nomor = document.getElementById("no_surat").value;
+    document.getElementById("no_surat").value= nomor.slice(0, -1);
 }

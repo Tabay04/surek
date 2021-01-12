@@ -9,6 +9,8 @@
 	$pukul = $_POST['pukul']; 
 	$dikuburkan = $_POST['dikuburkan'];
 	$kota = $_POST['kota'];
+	session_start();
+	$id_admin = $_SESSION['admin_id_admin'];
 	
 	if ($_POST['status']=='on') {
 		$status = "1";
@@ -20,7 +22,7 @@
 	$tanggal = date('Y-m-d');
 
 
-	$sql = pg_query("INSERT INTO skmd (no_surat, nik, nik_pelapor, id_pegawai, hubungan, status, tanggal,tanggal_meninggal,pukul,dikuburkan,kota) VALUES ('$no_surat', '$nik', '$pelapor', '$pegawai', '$hubungan', '$status', '$tanggal', '$tanggal_meninggal','$pukul','$dikuburkan','$kota')");
+	$sql = pg_query("INSERT INTO skmd (no_surat, nik, nik_pelapor, id_pegawai, hubungan, status, tanggal,tanggal_meninggal,pukul,dikuburkan,kota, id_admin) VALUES ('$no_surat', '$nik', '$pelapor', '$pegawai', '$hubungan', '$status', '$tanggal', '$tanggal_meninggal','$pukul','$dikuburkan','$kota', '$id_admin')");
 
 	if ($sql) {
 		echo '<meta http-equiv="refresh" content="0.1;url=../surat/skmd/skmd.php?no='.$no_surat.'">';

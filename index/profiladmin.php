@@ -124,15 +124,15 @@
                 </div>
                 <div class="card-body">
                   
-                  <form action="../proses/editprofil.php" method="POST">
+                  <form action="../proses/pengaturan.php" method="POST">
                     <div class="row">
                       <div class="col-md-4">
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
                           <label class="bmd-label-floating">Username</label>
-                          <input id="id_adm" required type="hidden" name="id_adm" class="form-control" value="">
-                          <input id="useradmin" required type="text" name="useradmin" class="form-control" value="">
+                          <input id="id_adm" required type="hidden" name="id_adm" class="form-control" value="<?php echo $_SESSION['admin_id_admin'] ?>">
+                          <input id="useradmin" required type="text" name="username" class="form-control" value="<?php echo $_SESSION['admin_username'] ?>">
                           </div>
                       </div>
                     </div>
@@ -152,7 +152,7 @@
                       <div class="col-md-4">
                           <div class="form-group">
                           <label class="bmd-label-floating">Retype Password</label>
-                          <input id="pw" required type="password" name="pw" class="form-control" value="">
+                          <input id="pw" required type="password" name="pw2" class="form-control" value="">
                           </div>
                       </div>
                     </div>
@@ -167,16 +167,17 @@
               <div class="card card-profile">
                 <div class="card-avatar">
                   <a href="#pablo">
-                    <img class="img" src="../assets/img/faces/marc.jpg" />
+                    <img class="img" src="../assets/img/faces/Ava.png" />
                   </a>
                 </div>
-                <br>
+                <!-- <br> -->
                 <form >
-                  <input class="btn btn-primary btn" type="submit" name="upload" value="Upload Foto">
+                  <!-- <input class="btn btn-primary btn" type="submit" name="upload" value="Upload Foto"> -->
                 <div class="card-body">
                   <h6 class="card-category text-gray">Admin</h6>
                   <h4 class="card-title">Riko Aries</h4>
-                  <a href="#pablo" class="btn btn-primary btn-round">Update</a>
+                  <br>
+                 <!--  <a href="#pablo" class="btn btn-primary btn-round">Update</a> -->
                 </div>
                 </form>
               </div>

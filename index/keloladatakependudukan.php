@@ -156,9 +156,9 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
+                  <!-- <a class="dropdown-item" href="profile">Profile</a> -->
                   <!-- <a class="dropdown-item" href="#">Settings</a> -->
-                  <div class="dropdown-divider"></div>
+                  <!-- <div class="dropdown-divider"></div> -->
                    <a class="dropdown-item" href="logout.php">Log out</a>
                 </div>
               </li>
@@ -251,16 +251,14 @@
             </div>
             </a>
         </div>
-         
         
-        </div>
-
-        <div class="row">
-
-        <div class="col-md-2">
-        </div>
-
       </div>
+
+      <!-- <div class="row">
+        
+          <iframe width="1100" height="1000" src="https://datastudio.google.com/embed/reporting/83e11df7-89ae-4e1d-84da-d03277f90325/page/D9toB" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
+      </div> -->
     </div>
   </div>
 

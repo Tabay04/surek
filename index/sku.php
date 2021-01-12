@@ -90,7 +90,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="suratmenyurat.php">Back</a>
+            <a class="navbar-brand" href="suratmenyuratadmin.php">Back</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -110,7 +110,7 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="profiladmin.php">Profile</a>
                   <!-- <a class="dropdown-item" href="#">Settings</a> -->
                   <div class="dropdown-divider"></div>
                    <a class="dropdown-item" href="logout.php">Log out</a>
@@ -143,7 +143,7 @@
                   ?>
                   <font>No. Surat:</font>
                   <br>
-                  <input type="hidden" name="temp" id="temp" value="500 / 0<?php echo $no ?> / SKMD / 2020">
+                  <input type="hidden" name="temp" id="temp" value="500 / 0<?php echo $no ?> / SKMD / 2021">
                   <button class="btn btn-primary" onclick="maxSetting()">Nomor Setting</button>
                   <script type="text/javascript">
                     
@@ -157,7 +157,7 @@
                   </script>
                   <button class="btn btn-primary" onclick="checkNomor()">Nomor Terakhir</button>
 
-                    <input id="no_surat"  type="text" class="form-control" required name="no_surat" value="500 / 00<?php echo $no?> / SKU / 2020">
+                    <input id="no_surat"  type="text" class="form-control" readonly required name="no_surat" value="500 / 00<?php echo $no?> / SKU / 2021">
 
                   <br/>
                   <select class="selectpicker form-control" id="nik" name="nik" data-container="body" data-live-search="true" required title="PILIH NIK PENDUDUK" data-hide-disabled="true">
@@ -170,7 +170,7 @@
                         ?>
                   </select>
                   <br/><br/><br/>
-                  <font>Nama Usaha:</font>
+                  <font>Jenis Usaha:</font>
                   <select class="form-control" required id="jenis_usaha" title="Pilih Usaha" name="jenis_usaha">
                     <option></option>
                         <?php                

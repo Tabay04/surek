@@ -1,4 +1,4 @@
-<?php 
+  <?php 
   
   ob_start();
   session_start();
@@ -152,9 +152,9 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
+                  <!-- <a class="dropdown-item" href="profile">Profile</a> -->
                   <!-- <a class="dropdown-item" href="#">Settings</a> -->
-                  <div class="dropdown-divider"></div>
+                  <!-- <div class="dropdown-divider"></div> -->
                    <a class="dropdown-item" href="logout.php">Log out</a>
                 </div>
               </li>

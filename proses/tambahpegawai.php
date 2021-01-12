@@ -12,7 +12,6 @@
 	}
 	else {
 		echo "<script>alert('gagal!')</script>";
-		//echo '<meta http-equiv="refresh" content="0.1;url=../index/skbb.php">';
 	}
 
 ?>
